@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Button from "./elements/Button";
+
 import "./css/history.css";
 
 function History() {
@@ -8,28 +8,23 @@ function History() {
   const [selectedDay, setSelectedDay] = useState("");
 
   useEffect(() => {
-
     const fetchData = async () => {
-    
       if (selectedMonth && selectedDay) {
         try {
-        
           const url = `https://byabbe.se/on-this-day/${selectedMonth}/${selectedDay}/events.json`;
           const response = await fetch(url);
-          
+
           if (response.ok) {
             const result = await response.json();
-            console.log(result)
+            console.log(result);
             if (Array.isArray(result.events)) {
-              setDataInfo(result.events);       
-              console.log("hi after result")}
-              else {
-               setDataInfo([]);
-
+              setDataInfo(result.events);
+              console.log("hi after result");
+            } else {
+              setDataInfo([]);
             }
-       
           } else {
-            throw new Error('Failed to fetch data');
+            throw new Error("Failed to fetch data");
           }
         } catch (error) {
           console.error(error);
@@ -51,17 +46,13 @@ function History() {
 
   return (
     <>
-    
       <form onSubmit={handleSubmit} id='myForm' className='form'>
-      <h1 className="title">History Events</h1>
+        <h1 className='title'>History Events</h1>
         <label htmlFor='monthInput'>Enter the Month:</label>
-        <select
-          id='monthInput'
-          name='monthInput'
-          className='input'
-          required
-        >
-          <option value='' defaultValue>Select a Month</option>
+        <select id='monthInput' name='monthInput' className='input' required>
+          <option value='' defaultValue>
+            Select a Month
+          </option>
           <option value='1'>January</option>
           <option value='2'>February</option>
           <option value='3'>March</option>
@@ -76,13 +67,10 @@ function History() {
           <option value='12'>December</option>
         </select>
         <label htmlFor='dayInput'>Enter the Day:</label>
-        <select
-          id='dayInput'
-          name='dayInput'
-          className='input'
-          required
-        >
-          <option value='' defaultValue>Select a Day</option>
+        <select id='dayInput' name='dayInput' className='input' required>
+          <option value='' defaultValue>
+            Select a Day
+          </option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -114,22 +102,35 @@ function History() {
           <option value='29'>29</option>
           <option value='30'>30</option>
           <option value='31'>31</option>
-        </select>       
-<button className="button-confirm">click</button>
+        </select>
+        <button className='button-confirm'>Search the History 🔎</button>
+        <div className='resultBox'>
+          {dataInfo.map((data, id) => (
+            <div key={id} className='captions'>
+              <span className='title-bar'>
+                {" "}
+                {data.wikipedia &&
+                  data.wikipedia[0] &&
+                  data.wikipedia[0].title && (
+                    <h6>
+                      <b>Event title: </b>
+                      {data.wikipedia[0].title}
+                    </h6>
+                  )}
+                {data.year && data.year > 1000 && (
+                  <p className='year'>
+                    <b>Year: </b>
+                    {data.year}
+                  </p>
+                )}
+              </span>
+              {data.year !== "" && (
+                <p className='description'>{data.description}</p>
+              )}
+            </div>
+          ))}
+        </div>
       </form>
-      <div style={{ backgroundColor: "pink" }}>
-      {dataInfo.map((data, id) => (
-          <div key={id}>
-            {data.year && data.year > 1000 && (
-              <h5>Event Year: {data.year}</h5>
-            )}
-            {data.wikipedia && data.wikipedia[0] && data.wikipedia[0].title && (
-              <h5>Event title: {data.wikipedia[0].title}</h5>
-            )}
-            {data.year !== "" && <p>{data.description}</p>}
-          </div>
-        ))}
-      </div>
     </>
   );
 }
