@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Movies() {
+function News() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Movies() {
   )
 }
 
-export default Movies
+export default News

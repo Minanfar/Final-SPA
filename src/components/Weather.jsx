@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Series() {
+function Weather() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function Series() {
   )
 }
 
-export default Series
+export default Weather
