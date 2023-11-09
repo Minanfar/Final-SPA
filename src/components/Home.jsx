@@ -1,12 +1,9 @@
-import WeatherDisplay from './WeatherDisplay'
-import NewsCard from './NewsCard';
+import React from "react";
 
 function Home() {
-
   return (
     <>
-      {/* <WeatherDisplay /> */}
-      <NewsCard />
+     Home
     </>
   );
 }
