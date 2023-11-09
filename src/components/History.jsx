@@ -49,9 +49,9 @@ function History() {
 
     <section className="container">
       <form onSubmit={handleSubmit} className='form'>
-        <h1 className='title'>History Events</h1>
-        <label htmlFor='monthInput'>Enter the Month:</label>
-        <select id='monthInput' name='monthInput' className='input' required>
+        <h1 className='history-title'>History Events</h1>
+        <label htmlFor='monthInput' className="history-label">Enter the Month:</label>
+        <select id='monthInput' name='monthInput' className='history-input' required>
           <option value='' defaultValue>
             Select a Month
           </option>
@@ -68,8 +68,8 @@ function History() {
           <option value='11'>November</option>
           <option value='12'>December</option>
         </select>
-        <label htmlFor='dayInput'>Enter the Day:</label>
-        <select id='dayInput' name='dayInput' className='input' required>
+        <label htmlFor='dayInput' className="history-label">Enter the Day:</label>
+        <select id='dayInput' name='dayInput' className='history-input' required>
           <option value='' defaultValue>
             Select a Day
           </option>

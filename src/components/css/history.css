@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
     --main-color-Mint: #DBE8D8;
     --main-color-yGreen: #C8DF52;
     --main-color-Yellow: #FEDE00;
@@ -37,53 +38,42 @@
     margin-top: .2rem;
 }
 
+.history-label{
+    font-size: 24px;
+}
 .form {
-    --input-focus: #2d8cf0;
     --font-color: #323232;
     --font-color-sub: #666;
     --bg-color: beige;
     --main-color: black;
     padding: 20px;
     background: lightblue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     gap: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
-    width: 60vw;
-    min-width: 370px;
-    max-height: 650px;
+    min-width: 80vw;
+    margin-left: 20vw;
+    margin-top: 30vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-
 }
 
-.title {
+.history-title {
     color: var(--font-color);
     font-weight: 900;
-    font-size: 20px;
-
+    font-size: 32px;
     margin-bottom: 25px;
 }
 
-.title span {
-    color: var(--font-color-sub);
-    font-weight: 600;
-    font-size: 17px;
-}
-
-.input {
-    width: 300px;
+.history-input {
+    width: 400px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
     box-shadow: 4px 4px var(--main-color);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     color: var(--font-color);
     padding: 5px 10px;
@@ -91,12 +81,12 @@
     cursor: pointer;
 }
 
-.input::placeholder {
+.history-input::placeholder {
     color: var(--font-color-sub);
     opacity: 0.8;
 }
 
-.input:focus {
+.history-input:focus {
     border: 2px solid rgb(110, 105, 88);
     box-shadow: 2px 3px 2px 2px;
 }
@@ -136,13 +126,13 @@
 
 .button-confirm {
     margin: 20px auto 0 auto;
-    width: 250px;
+    width: 400px;
     height: 40px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
     box-shadow: 4px 4px var(--main-color);
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
     color: var(--font-color);
     cursor: pointer;

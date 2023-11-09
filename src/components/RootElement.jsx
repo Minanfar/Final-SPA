@@ -10,22 +10,22 @@ function RootElement() {
   return (
     <>
       <header>
-        <nav>
+        <nav className="navbar-menu">
           <Link to='/'>
-            <img className='img' src={homeImg} alt='' />
+            <img className='navbar-img' src={homeImg} alt='' />
           </Link>
           <Link to='/weather'>
-            <img className='img' src={weatherImg} alt='' />
+            <img className='navbar-img' src={weatherImg} alt='' />
           </Link>
           <Link to='/news'>
-            <img className='img' src={newsImg} alt='' />
+            <img className='navbar-img' src={newsImg} alt='' />
           </Link>
           <Link to='/history'>
-            <img className='img' src={historyImg} alt='' />
+            <img className='navbar-img' src={historyImg} alt='' />
           </Link>
         </nav>
       </header>
-      <main>
+      <main className="router-main">
         <Outlet />
       </main>
     </>
