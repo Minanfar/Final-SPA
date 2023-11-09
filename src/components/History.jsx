@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+
 import "./css/history.css";
 
 function History() {
   const [dataInfo, setDataInfo] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState("");
   const [selectedDay, setSelectedDay] = useState("");
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -13,13 +15,12 @@ function History() {
         try {
           const url = `https://byabbe.se/on-this-day/${selectedMonth}/${selectedDay}/events.json`;
           const response = await fetch(url);
-
+       
           if (response.ok) {
             const result = await response.json();
             console.log(result);
             if (Array.isArray(result.events)) {
               setDataInfo(result.events);
-              console.log("hi after result");
             } else {
               setDataInfo([]);
             }
@@ -29,6 +30,7 @@ function History() {
         } catch (error) {
           console.error(error);
           setDataInfo([]);
+         
         }
       }
     };
@@ -104,32 +106,33 @@ function History() {
           <option value='31'>31</option>
         </select>
         <button className='button-confirm'>Search the History 🔎</button>
-        <div className='resultBox'>
-          {dataInfo.map((data, id) => (
-            <div key={id} className='captions'>
-              <span className='title-bar'>
-                {" "}
-                {data.wikipedia &&
-                  data.wikipedia[0] &&
-                  data.wikipedia[0].title && (
-                    <h6>
-                      <b>Event title: </b>
-                      {data.wikipedia[0].title}
-                    </h6>
+        {selectedMonth && selectedDay && (
+          <div className='resultBox'>
+            {dataInfo.map((data, id) => (
+              <div key={id} className='captions'>
+                <span className='title-bar'>
+                  {data.wikipedia &&
+                    data.wikipedia[0] &&
+                    data.wikipedia[0].title && (
+                      <h6>
+                        <b>Event title: </b>
+                        {data.wikipedia[0].title}
+                      </h6>
+                    )}
+                  {data.year && data.year > 1000 && (
+                    <p className='year'>
+                      <b>Year: </b>
+                      {data.year}
+                    </p>
                   )}
-                {data.year && data.year > 1000 && (
-                  <p className='year'>
-                    <b>Year: </b>
-                    {data.year}
-                  </p>
+                </span>
+                {data.year !== "" && (
+                  <p className='description'>{data.description}</p>
                 )}
-              </span>
-              {data.year !== "" && (
-                <p className='description'>{data.description}</p>
-              )}
-            </div>
-          ))}
-        </div>
+              </div>
+            ))}
+          </div>
+        )}
       </form>
     </>
   );
