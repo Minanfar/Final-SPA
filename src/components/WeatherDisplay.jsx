@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Weather.css";
+import "./css/Weather.css";
 
 const WeatherDisplay = () => {
   const [city, setCity] = useState("Berlin");

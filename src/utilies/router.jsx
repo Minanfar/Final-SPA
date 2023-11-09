@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootElement from "../components/RootElement";
-import News from "../components/News";
+import NewsCard from "../components/NewsCard";
 import Home from "../components/Home";
 import History from "../components/History";
 import NotFoundPage from "../components/NotFoundPage";
-import Weather from "../components/Weather";
+import WeatherDisplay from "../components/WeatherDisplay";
 
 export const router = createBrowserRouter([
   {
@@ -20,9 +20,9 @@ export const router = createBrowserRouter([
       },
       {
         path: "/weather",
-        element: <Weather />,
+        element: <WeatherDisplay />,
       },
-      { path: "/news", element: <News /> },
+      { path: "/news", element: <NewsCard /> },
       {
         path: "/*",
         element: <NotFoundPage />,

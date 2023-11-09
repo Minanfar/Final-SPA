@@ -1,5 +1,12 @@
+import { createContext } from "react";
 
-function historyData() {
+const historyProvider= createContext ()
+function HistoryData() {
+  const [dataInfo, setDataInfo] = useState([]);
+  const [selectedMonth, setSelectedMonth] = useState("");
+  const [selectedDay, setSelectedDay] = useState("");
+  
+
   return (
     <>
       <section className=''>
@@ -79,4 +86,4 @@ function historyData() {
   );
 }
 
-export default historyData;
+export default HistoryData;
