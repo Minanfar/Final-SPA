@@ -48,7 +48,9 @@ function History() {
 
   return (
     <>
-      <form onSubmit={handleSubmit} id='myForm' className='form'>
+
+    <section className="container">
+      <form onSubmit={handleSubmit} className='form'>
         <h1 className='title'>History Events</h1>
         <label htmlFor='monthInput'>Enter the Month:</label>
         <select id='monthInput' name='monthInput' className='input' required>
@@ -134,6 +136,7 @@ function History() {
           </div>
         )}
       </form>
+      </section>
     </>
   );
 }
