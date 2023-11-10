@@ -55,7 +55,7 @@ const WeatherDisplay = () => {
   return (
     <div className=''>
       <div className=''>
-        <h1 className='weather-title'>Weather Forcasting</h1>
+        <h1 className='weather-title'>Weather Forecasting</h1>
         <div className='search'>
           <input
             type='text'
@@ -89,15 +89,15 @@ const WeatherDisplay = () => {
             )}
 
             {weather.weather[0].main === "Clear" && (
-              <div className='container'>
-                <span className='sun suweather nshine'></span>
+              <div className='weather-input-container'>
+                <span className='sun sunshine'></span>
                 <span className='sun'></span>
               </div>
             )}
 
             {(weather.weather[0].main === "Rain" ||
               weather.weather[0].main === "Drizzle") && (
-              <div className='container'>
+              <div className='weather-input-container'>
                 <div className='rain-container'>
                   <span className='rain'></span>
                   <span className='rain'></span>
@@ -114,7 +114,7 @@ const WeatherDisplay = () => {
               </div>
             )}
             {weather.weather[0].main === "Snow" && (
-              <div className='container'>
+              <div className='weather-input-container'>
                 <div className='rain-container'>
                   <span className='snow'></span>
                   <span className='snow'></span>

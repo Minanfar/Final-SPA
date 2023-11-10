@@ -33,8 +33,8 @@ const NewsCard = () => {
 
   return (
     <div className="news-card">
-      <h2>Aktuelle Nachrichten</h2>
-      {loading && <p>Lade Nachrichten...</p>}
+      <h2>Today News</h2>
+      {loading && <p>Load News...</p>}
       {error && <p>{error}</p>}
       <div className="news-container">
         {news.map((article, index) => (

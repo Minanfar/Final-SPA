@@ -9,13 +9,14 @@
 .navbar-menu{
     background-color: var(--main-color-Yellow);
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 17vw;
     height: 100vh;
     position: absolute;
     top: 0;
     z-index: 100;
+    padding-top: 50px;
 }
 
 .navbar-img:hover {
@@ -27,12 +28,12 @@
 }
 
 .navbar-img {
-    width: 120px;
+    width: 14vw;
     background-color: #929292;
     padding: 20px;
     border-radius: 20%;
     position: relative;
-    left: 25%;
+    /* left: 25%; */
 }
 
 .router-main {
