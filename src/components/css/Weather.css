@@ -59,6 +59,7 @@
 }
 .weather-title{
   font-size: 800;
+  padding: 25px;
 }
 .cloud {
   width: 250px;
@@ -159,6 +160,28 @@
     transform: translateX(15px);
   }
 }
+.rain {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #2677c9;
+  animation: rainAnimation 2s linear infinite;
+  display: inline;
+  position: absolute;
+}
+.rain-container span:first-child {
+  margin-left: 30px;
+}
+.rain-container span:last-child {
+  margin-left: 80px;
+  margin-top: 35px;
+}
+.rain-container span:nth-child(2) {
+  margin-left: 180px;
+  margin-top: -10px;
+}
+
 .weather-date{
   font-size: 12px;
   margin-bottom: 20px;
