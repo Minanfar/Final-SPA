@@ -33,10 +33,12 @@ const NewsCard = () => {
   }, [API_URL]);
 
   return (
+
     <div >
       <h1 className='news-title'>𝒫𝓇𝑒𝓈𝓈 𝒯𝑜𝒹𝒶𝓎</h1>
       
       {loading && <p><i>loading news...</i></p>}
+
       {error && <p>{error}</p>}
       <div className="news-container">
         {news.map((article, index) => (
