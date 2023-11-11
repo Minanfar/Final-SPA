@@ -1,0 +1,58 @@
+/* NewsCard.css */
+.news-title {
+  font-size: 50px;
+  padding: 25px;
+  text-align: center;
+
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  width: 80vw;
+  height: 80vh;
+  overflow-y: scroll;
+  border-radius: 20px;
+  padding: 20px 30px 30px 20px;
+}
+
+.article {
+  width: 350px;
+  height: 450px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 30px #bebebe, -1px -1px 3px #ffffff;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+}
+
+.article:hover {
+  transform: scale(1.05);
+}
+
+.article img {
+  width: 100%;
+  border-radius: 10px 10px 5px 5px;
+  margin-bottom: 10px;
+}
+
+.article h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.article p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.article a {
+  display: block;
+  text-decoration: none;
+  color: #0366d6;
+  font-style: italic;
+  position: absolute;
+  bottom: 5px;
+}

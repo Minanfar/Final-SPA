@@ -5,6 +5,7 @@ const NewsCard = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+ 
 
   const API_KEY = '2e9f19b0185b42ce96f13b82ca4576cc';
   const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
@@ -32,9 +33,10 @@ const NewsCard = () => {
   }, [API_URL]);
 
   return (
-    <div className="news-card">
-      <h2>Aktuelle Nachrichten</h2>
-      {loading && <p>Lade Nachrichten...</p>}
+    <div >
+      <h1 className='news-title'>𝒫𝓇𝑒𝓈𝓈 𝒯𝑜𝒹𝒶𝓎</h1>
+      
+      {loading && <p><i>loading news...</i></p>}
       {error && <p>{error}</p>}
       <div className="news-container">
         {news.map((article, index) => (
@@ -43,7 +45,7 @@ const NewsCard = () => {
             <h3>{article.title}</h3>
             <p>{article.description}</p>
             <a href={article.url} target="_blank" rel="noopener noreferrer">
-              Lesen Sie mehr
+           Read more ... 
             </a>
           </div>
         ))}
