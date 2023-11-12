@@ -35,6 +35,7 @@ function Home() {
 
   return (
     <>
+    <p></p>
       <div className='home-main-box'  >
         <h1 className='home-title'>
           Discover the past, stay informed about the present, and plan for the
