@@ -10,7 +10,8 @@ function RootElement() {
   return (
     <>
       <header>
-        <nav className="navbar-menu">
+        <nav className='navbar-menu'>
+          <p className='main-date'>{new Date().toDateString()}</p>
           <Link to='/'>
             <img className='navbar-img' src={homeImg} alt='' />
           </Link>
@@ -25,7 +26,7 @@ function RootElement() {
           </Link>
         </nav>
       </header>
-      <main className="router-main">
+      <main className='router-main'>
         <Outlet />
       </main>
     </>

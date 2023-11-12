@@ -1,21 +1,46 @@
+@media only screen and (max-width: 780px) {
+    .navbar-menu {
+        max-width: 120px;
+        position: absolute;
+    }
+
+    .navbar-img {
+        max-width: 80px;
+        position: relative;
+margin: 0 auto;
+    }
+}
+
 * {
     box-sizing: border-box;
     --main-color-Mint: #DBE8D8;
     --main-color-yGreen: #C8DF52;
     --main-color-Yellow: #FEDE00;
     --main-color-Green: #0A7029;
+    font-family: 'Jost', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
-.navbar-menu{
+.navbar-menu {
     background-color: var(--main-color-Yellow);
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    width: 17vw;
+    width: 200px;
     height: 100vh;
     position: absolute;
     top: 0;
+    left: 0;
     z-index: 100;
+}
+
+.main-date {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto;
 }
 
 .navbar-img:hover {
@@ -27,12 +52,13 @@
 }
 
 .navbar-img {
-    width: 120px;
+    width: 100px;
     background-color: #ababab;
     padding: 20px;
     border-radius: 20%;
     position: relative;
-    left: 25%;
+    left: 50px;
+
 }
 
 .router-main {
