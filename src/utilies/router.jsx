@@ -5,6 +5,7 @@ import Home from "../components/Home";
 import History from "../components/History";
 import NotFoundPage from "../components/NotFoundPage";
 import WeatherDisplay from "../components/WeatherDisplay";
+import LoginPage from "../components/LoginPage";
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ export const router = createBrowserRouter([
         element: <WeatherDisplay />,
       },
       { path: "/news", element: <NewsCard /> },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
       {
         path: "/*",
         element: <NotFoundPage />,
