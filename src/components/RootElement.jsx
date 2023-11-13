@@ -14,7 +14,7 @@ function RootElement() {
     <>
       <header>
         <nav className='navbar-menu'> 
-        <h5 className='navbar-username'>Welcome <i>{username}</i>!</h5>
+        <p className='navbar-username'>Welcome <i>{username}</i>!</p>
           <Link to='/'>
             <img className='navbar-img' src={homeImg} alt='' />
           </Link>
