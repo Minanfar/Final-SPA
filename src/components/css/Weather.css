@@ -1,5 +1,15 @@
+@media only screen and (max-width: 780px) {
+  .weather-main{
+    max-width: 300px;
+    margin-left: 18%;
+  }
+ 
+  .search input[type="text"]{
+ width: 200px;
+}
+}
 .weather-main{
-  min-width: 400px;
+ width: 400px;
   height: 300px;
   position: relative;
   padding: 25px;
@@ -18,7 +28,7 @@
 }
 
 .search input[type="text"] {
-  min-width: 500px;
+ width: 400px;
   padding: 10px;
   margin-bottom: 60px;
   border: none;

@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import weather from "../assets/thunder.jpg";
+import weather from "../assets/clouds.jpg";
 import news from "../assets/newspaper.jpg";
 import greece from "../assets/greece.jpg";
 import { Link } from "react-router-dom";
@@ -38,9 +38,9 @@ function Home() {
    
       <div className='home-main-box'  >
         <h1 className='home-title'>
-          Discover the past, stay informed about the present, and plan for the
-          future with our comprehensive SPA. Navigate through sections on
-          history, news, and weather seamlessly.
+        ❝ Discover the <b>past</b> and stay informed about the <b>present</b>, and plan for the
+          future with our comprehensive SPA.❞
+          <p style={{fontSize:"12px", marginTop:"15px",marginLeft:"80%"}}>your RM Team</p>
         </h1>
         <div className='home-img-container' >
           <Link
