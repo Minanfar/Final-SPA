@@ -22,7 +22,7 @@ Our SPA is designed to offer a seamless experience for users to explore weather 
 
 
 # Clone the repository
-SSH: [Github Link](git@github.com/Minanfar/Final-SPA.git)
+SSH: git@github.com/Minanfar/Final-SPA.git
 
 # React + Vite
 
