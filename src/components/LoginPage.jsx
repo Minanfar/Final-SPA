@@ -1,13 +1,15 @@
 import React from "react";
 import { useContext, useState } from "react";
 import { UserContext } from "./context/UseContext";
+import { useNavigate } from "react-router-dom";
 
 import "./css/login.css";
 
 function LoginPage() {
   const { user, login, setShowLoginPage } = useContext(UserContext);
-  const [username, setUsername] = useState("mina");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate=useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,6 +17,7 @@ function LoginPage() {
 
     login(username, password);
     console.log(user);
+    navigate("/")
     setUsername("");
     setPassword("");
   };
