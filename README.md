@@ -21,7 +21,7 @@ Our SPA is designed to offer a seamless experience for users to explore weather 
 - Other technologies...
 
 # Clone the repository
-SSH: git@github.com:Minanfar/Final-SPA.git
+SSH:[Link Text](git@github.com:Minanfar/Final-SPA.git)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
