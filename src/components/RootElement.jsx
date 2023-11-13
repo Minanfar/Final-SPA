@@ -1,21 +1,22 @@
-import React from "react";
+import React,{useContext} from "react";
 import "./css/rootelement.css";
 import { Outlet, Link } from "react-router-dom";
 import homeImg from "../assets/home.png";
 import weatherImg from "../assets/weather.png";
 import newsImg from "../assets/news.png";
 import historyImg from "../assets/history.png";
-import LoginPage from "./LoginPage";
+import { UserContext } from "./context/UseContext";
 
-function RootElement({username}) {
+
+function RootElement() {
+  const {username}=useContext(UserContext)
   return (
     <>
       <header>
         <nav className='navbar-menu'> 
-        <h5>Welcome, {username}!</h5>
-          <p className='main-date'>{new Date().toDateString()}</p>
+    
+        <h5 className='navbar-username'>Welcome {username}!</h5>
          
-          
           <Link to='/'>
             <img className='navbar-img' src={homeImg} alt='' />
           </Link>
@@ -28,6 +29,9 @@ function RootElement({username}) {
           <Link to='/history'>
             <img className='navbar-img' src={historyImg} alt='' />
           </Link>
+          
+          <p className='main-date'>Today: {new Date().toDateString()}</p>
+         
         </nav>
       </header>
       <main className='router-main'>

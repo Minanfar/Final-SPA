@@ -28,6 +28,7 @@ margin: 0 auto;
     background-color: var(--main-color-Yellow);
     display: flex;
     justify-content: center;
+    
     flex-wrap: wrap;
     width: 17vw;
     height: 100vh;
@@ -39,7 +40,7 @@ margin: 0 auto;
 }
 
 .main-date {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     margin: 0 auto;
     text-align: center;
@@ -59,9 +60,16 @@ margin: 0 auto;
     padding: 10px;
     border-radius: 20%;
     position: relative;
-    /* left: 25%; */
+
     max-width: 130px;
     min-width: 55px;
+}
+.navbar-username{
+    width: 13vw;
+    padding: 10px;
+    position: relative;
+    max-width: 130px;
+    min-width: 55px; 
 }
 
 .router-main {

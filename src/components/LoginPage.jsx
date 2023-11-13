@@ -1,66 +1,60 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import { useContext, useState } from "react";
+import { UserContext } from "./context/UseContext";
+
 import "./css/login.css";
-import Home from "./Home";
 
-
-const LoginPage = () => {
-  const [username, setUsername] = useState("");
+function LoginPage() {
+  const { user, login, setShowLoginPage } = useContext(UserContext);
+  const [username, setUsername] = useState("mina");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowLoginPage(true);
 
-  const handleLogin = ({username}) => {
-    if (username !== "" && password !== "") {
-      setLoggedIn(true);
-    setLoggedIn(true)
-   
-    }
-    const navigate = useNavigate();
-
-    // Redirect to home page if logged in
-    if (loggedIn) {
-      navigate("/");
-      return null; // Render nothing if already logged in
-    }
+    login(username, password);
+    console.log(user);
+    setUsername("");
+    setPassword("");
   };
 
   return (
     <>
-      <div className='login-container'>
-        <div className='login-heading'>Sign In</div>
+      <section className='login-container'>
+      <div className='login-heading'>
+        <h2>Sign In</h2>
+        <form onSubmit={handleSubmit} className='login-form'>
           <div>
-            <form className='login-form'>
-              <input
-                className='login-input'
-                placeholder='Usename'
-                type='text'
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                required
-              />
-
-              <input
-                className='login-input'
-                placeholder='Password'
-                type='password'
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-
-              <input
-              onClick={handleLogin}
-                className='login-button'
-                type='submit'
-                value='Sign In'
-              ></input>
-            </form>
+            <input
+            className="login-input"
+            placeholder="Username"
+              type='text'
+              name='username'
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+            />
           </div>
-     
+          <div>
+            <input
+            className="login-input"
+            placeholder="Password"
+              type='password'
+              name='password'
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button className='login-button' type='submit'>
+            sign in
+          </button>
+        </form>
       </div>
+      </section>
     </>
   );
-};
+}
 
 export default LoginPage;
