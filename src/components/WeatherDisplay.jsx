@@ -53,7 +53,7 @@ const WeatherDisplay = () => {
   };
 
   return (
-    <div className=''>
+    <div className='weather-main-dev'>
       <div className=''>
         <h1 className='weather-title'>Weather Forecasting</h1>
         <div className='search'>
@@ -134,7 +134,7 @@ const WeatherDisplay = () => {
           <div className='card-header'>
             <p className='weather-date'>{new Date().toDateString()}</p>
             <h2>{weather.name}</h2>
-            <h5>{weather.weather[0].description}</h5>
+            <span>{weather.weather[0].description}</span>
             <span>Humidity {weather.main.humidity}%</span>
           </div>
           <span className='temp'>

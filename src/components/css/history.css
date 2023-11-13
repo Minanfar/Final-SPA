@@ -54,8 +54,8 @@
     border: 2px solid var(--main-color);
     box-shadow: 4px 4px var(--main-color);
     width: 60vw;
-    min-width: 370px;
-    max-height: 650px;
+    min-width: 300px;
+    max-height: 620px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -77,8 +77,9 @@
 }
 
 .history-input {
-    width: 300px;
+    width: 70vw;
     height: 40px;
+    max-width: 200px;
     border-radius: 5px;
     border: 2px solid var(--main-color);
     background-color: var(--bg-color);
