@@ -20,9 +20,14 @@ Our SPA is designed to offer a seamless experience for users to explore weather 
 - React Router
 - Other technologies...
 
+
 # Clone the repository
+<<<<<<< HEAD
 # Clone the repository
 SSH: [Clone the repository](ssh://git@github.com/Minanfar/Final-SPA.git)
+=======
+SSH: git@github.com/Minanfar/Final-SPA.git
+>>>>>>> a4978335cddf2705f131b070d1aaea2a47b6504c
 
 # React + Vite
 
