@@ -33,9 +33,9 @@ const reducer = (state, action) => {
 };
 
 function Home() {
-  const { setShowLoginPage, showLoginPage, username } = useContext(UserContext);
+  const { setShowLoginPage, isLoggedIn,setLoggedIn, username } = useContext(UserContext);
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [isLoggedIn, setLoggedIn] = useState(false);
+  
   useEffect(() => {
     // Check if the user is logged in
     if (username) {
@@ -49,24 +49,14 @@ function Home() {
   return (
     <>
       <div className='home-main-box'>
-        <h3>To access the page, please Sign in</h3>
+        
         {isLoggedIn ? (
           <div>
             <h1 className='home-title'>
-              ❝ Discover the <b>past</b> and stay informed about the{" "}
+              ❝ Discover the <b>past</b> and stay informed about the
               <b>present</b>, and plan for the future with our comprehensive
               SPA.❞
-              <p
-                style={{
-                  fontSize: "12px",
-                  marginTop: "15px",
-                  marginLeft: "80%",
-                }}
-              >
-                your RM Team
-              </p>
             </h1>
-
             <div className='home-img-container'>
               <Link
                 to='/weather'
@@ -106,9 +96,9 @@ function Home() {
               </Link>
             </div>
           </div>
-        ) : (
+        ) :
           <LoginPage />
-        )}
+       }
       </div>
     </>
   );

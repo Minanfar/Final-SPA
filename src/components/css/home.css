@@ -23,17 +23,17 @@
 
 
 .home-main-box {
-    width: 60vw;
+    min-width: 60vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+
 }
 
 .home-title {
     font-weight: 300;
     font-style: italic;
-    margin: 20px;
+    margin: 50px;
     padding: 30px;
     text-align: justify;
     border-radius: 10px;
@@ -53,17 +53,16 @@
 }
 
 .home-img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     margin-bottom: 20px;
     transition: all 1000ms;
     margin: 30px;
 }
 
 .home-img-container {
-    width: 60vw;
     display: flex;
-    justify-content: space-evenly;
-    gap: 10px;
+    justify-content: center;
+    gap: 40px;
 }
 
 .home-img-container Link {

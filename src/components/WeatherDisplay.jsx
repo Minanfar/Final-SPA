@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect,useContext  } from "react";
 import "./css/Weather.css";
+import { UserContext } from "./context/UseContext";
+import LoginPage from "./LoginPage";
 
 const WeatherDisplay = () => {
   const [city, setCity] = useState("Berlin");
@@ -7,6 +9,8 @@ const WeatherDisplay = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isCelsius, setIsCelsius] = useState(true);
+  const { setShowLoginPage, isLoggedIn, setLoggedIn, username } =
+    useContext(UserContext);
 
   const API_KEY = "6da47bdbd86dfd6f6e9b9bdb0b04c10e";
 
@@ -31,7 +35,15 @@ const WeatherDisplay = () => {
 
     setLoading(false);
   };
-
+useEffect(() => {
+    // Check if the user is logged in
+    if (username) {
+      setLoggedIn(true);
+    } else {
+      setShowLoginPage(true);
+      setLoggedIn(false);
+    }
+  }, [username, setShowLoginPage]);
   const handleCityChange = (e) => {
     setCity(e.target.value);
   };
@@ -53,10 +65,10 @@ const WeatherDisplay = () => {
   };
 
   return (
-    <div className='weather-main-dev'>
-      <div className=''>
-        <h1 className='weather-title'>Weather Forecasting</h1>
-        <div className='search'>
+      isLoggedIn ? (
+        <div className='weather-main-dev'>
+          <div className=''>
+            <h1 className='weather-title'>Weather Forecasting</h1> <div className='search'>
           <input
             type='text'
             value={city}
@@ -150,10 +162,13 @@ const WeatherDisplay = () => {
           >
             {isCelsius ? "to Fahrenheit" : "to Celsius"}
           </span>
-        </div>
+          </div>
       )}
     </div>
-  );
+  ) : (
+    <LoginPage />
+  )
+);
 };
 
 export default WeatherDisplay;

@@ -14,9 +14,7 @@ function RootElement() {
     <>
       <header>
         <nav className='navbar-menu'> 
-    
-        <h5 className='navbar-username'>Welcome {username}!</h5>
-         
+        <h5 className='navbar-username'>Welcome <i>{username}</i>!</h5>
           <Link to='/'>
             <img className='navbar-img' src={homeImg} alt='' />
           </Link>
@@ -29,9 +27,7 @@ function RootElement() {
           <Link to='/history'>
             <img className='navbar-img' src={historyImg} alt='' />
           </Link>
-          
           <p className='main-date'>Today: {new Date().toDateString()}</p>
-         
         </nav>
       </header>
       <main className='router-main'>

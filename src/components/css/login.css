@@ -1,3 +1,10 @@
+.login-main-page{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap:50px;
+    padding: 20px;
+}
 .login-container {
     max-width: 300px;
     background: #F8F9FD;
@@ -89,3 +96,13 @@
     left: 100%;
     transition: .3s all;
 }
+.signin-error {
+    margin-top: 10%;
+    text-align: justify;
+     margin-left: 22% ;
+     font-weight: 300;
+     font-style: italic;
+     color: rgb(0, 79, 148);
+     text-shadow: 2px 2px 20px rgb(1, 1, 149);
+ }
+ 
