@@ -42,6 +42,7 @@ margin: 0 auto;
     font-size: 12px;
     font-weight: bold;
     margin: 0 auto;
+    text-align: center;
 }
 
 .navbar-img:hover {
@@ -55,11 +56,12 @@ margin: 0 auto;
 .navbar-img {
     width: 13vw;
     background-color: #929292;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20%;
     position: relative;
     /* left: 25%; */
     max-width: 130px;
+    min-width: 55px;
 }
 
 .router-main {
