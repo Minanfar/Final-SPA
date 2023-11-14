@@ -48,6 +48,12 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.search input[type="text"]:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(36, 35, 35, 0.2);
+}
+
 .search button[type="submit"] {
   background-color: hsl(211, 78%, 61%);
   border: none;
