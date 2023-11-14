@@ -1,13 +1,3 @@
-/* @media only screen and (max-width: 780px) {
-  .weather-main{
-    max-width: 300px;
-    margin-left: 18%;
-  }
- 
-  .search input[type="text"]{
- width: 200px;
-}
-} */
 .weather-main-dev {
   display: flex;
   flex-direction: column;
@@ -194,6 +184,7 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  border-top-right-radius: 0;
   background-color: #2677c9;
   animation: rainAnimation 2s linear infinite;
   display: inline;
@@ -213,16 +204,16 @@
 
 @keyframes rainAnimation {
   0% {
-    transform: translateY(0);
-    opacity: 100;
+    transform: translateY(0) rotate(-45deg) scale(1);
+    /* opacity: 100; */
   }
-  50% {
-    transform: translateY(80px);
-    opacity: 80;
+  70% {
+    transform: translateY(100px) rotate(-45deg) scale(1);
+    /* opacity: 0; */
   }
   100% {
-    transform: translateY(0);
-    opacity: 0;
+    transform: translateY(100px) rotate(-45deg) scale(0);
+    /* opacity: 0; */
   }
 }
 
