@@ -101,6 +101,19 @@ useEffect(() => {
               </div>
             )}
 
+              {( weather.weather[0].main === "Haze") && (
+              <div className='weather-input-container'>
+                <div className='cloud front'>
+                  <span className='left-front'></span>
+                  <span className='right-front'></span>
+                </div>
+                <div className='cloud back'>
+                  <span className='left-back'></span>
+                  <span className='right-back'></span>
+                </div>
+              </div>
+            )}
+
             {weather.weather[0].main === "Clear" && (
               <div className='weather-input-container'>
                 <span className='sun sunshine'></span>
