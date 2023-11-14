@@ -11,8 +11,8 @@ const NewsCard = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const API_KEY = "2e9f19b0185b42ce96f13b82ca4576cc";
-  const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
+//  const API_KEY = "2e9f19b0185b42ce96f13b82ca4576cc";
+  const API_URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=2e9f19b0185b42ce96f13b82ca4576cc`;
 
   useEffect(() => {
     const fetchNews = async () => {
