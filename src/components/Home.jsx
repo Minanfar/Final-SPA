@@ -53,8 +53,7 @@ function Home() {
         {isLoggedIn ? (
           <div>
             <h1 className='home-title'>
-              ❝ Discover the <b>past</b> and stay informed about the
-              <b>present</b>, and plan for the future with our comprehensive
+              ❝ Discover the <b>past</b> and stay informed about the <b>present</b>, and plan for the future with our comprehensive
               SPA.❞
             </h1>
             <div className='home-img-container'>
