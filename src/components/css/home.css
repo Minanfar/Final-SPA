@@ -23,11 +23,6 @@
 
 
 .home-main-box {
-    min-width: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
 }
 
 .home-title {
@@ -39,7 +34,6 @@
     border-radius: 10px;
     background: rgb(255, 255, 255);
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(235, 235, 235, 1) 28%, rgba(220, 220, 220, 1) 39%, rgba(223, 223, 223, 1) 50%, rgba(222, 222, 222, 1) 61%, rgba(235, 235, 235, 1) 72%, rgba(255, 255, 255, 1) 100%);
-
 }
 
 .home-img {
