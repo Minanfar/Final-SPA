@@ -59,13 +59,11 @@ margin: 0 auto;
     padding: 10px;
     border-radius: 20%;
     position: relative;
-
     max-width: 130px;
     min-width: 55px;
 }
 .navbar-username{
     width: 13vw;
-    
     position: relative;
     max-width: 100px;
     min-width: 55px; 

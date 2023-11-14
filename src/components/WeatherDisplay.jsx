@@ -43,6 +43,7 @@ useEffect(() => {
       setShowLoginPage(true);
       setLoggedIn(false);
     }
+    fetchWeather();
   }, [username, setShowLoginPage]);
   const handleCityChange = (e) => {
     setCity(e.target.value);
